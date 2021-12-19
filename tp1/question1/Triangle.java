@@ -28,6 +28,15 @@ public class Triangle {
         color = "green";
         isVisible = false;
     }
+    public Triangle(int height, int width, int xPosition, int yPosition, String color, boolean isVisible){
+        this.height=height;
+        this.width=width;
+        this.xPosition=xPosition;
+        this.yPosition= yPosition;
+        this.color=color;
+        this.isVisible=isVisible;
+        
+    }
 
     /**
      * Make this triangle visible. If it was already visible, do nothing.

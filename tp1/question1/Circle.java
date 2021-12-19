@@ -20,6 +20,8 @@ public class Circle {
     /**
      * Create a new circle at default position with default color.
      */
+    
+    
     public Circle() {
         diameter = 30;
         xPosition = 20;
@@ -27,6 +29,15 @@ public class Circle {
         color = "blue";
         isVisible = false;
     }
+    public Circle(int diameter, int xPosition, int yPosition, String color,boolean isVisible){
+     
+        this.diameter= diameter;
+        this.xPosition = xPosition;
+        this.yPosition= yPosition;
+        this.color=color;
+        this.isVisible= isVisible;    
+    }
+    
 
     /**
      * Make this circle visible. If it was already visible, do nothing.

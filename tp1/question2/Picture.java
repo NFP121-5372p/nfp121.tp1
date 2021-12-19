@@ -20,14 +20,21 @@ public class Picture {
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle sun2;
 
     /**
      * Constructor for objects of class Picture
      */
     public Picture() {
+        
         // nothing to do... instance variables are automatically set to null
     }
-
+public Picture(Square wall, Square window, Triangle roof, Circle sun){
+this.wall=wall;
+this.window=window;
+this.roof=roof;
+this.sun=sun;
+}
     /**
      * Draw this picture.
      */
@@ -50,7 +57,7 @@ public class Picture {
         roof.makeVisible();
 
         sun = new Circle();
-        sun.changeColor("yellow");
+        sun.changeColor("Blue");
         sun.moveHorizontal(180);
         sun.moveVertical(-10);
         sun.changeSize(60);
@@ -63,13 +70,17 @@ public class Picture {
     public void setBlackAndWhite() {
         if (wall != null) // only if it's painted already...
         {
-            wall.changeColor("black");
+            wall.changeColor("red");
             window.changeColor("white");
-            roof.changeColor("black");
-            sun.changeColor("black");
+            roof.changeColor("blue");
+            sun.changeColor("blue");
         }
     }
-
+     public void coucher(){
+         if(sun!=null){
+                      sun.slowMoveVertical(80); 
+                      }
+        }
     /**
      * Change this picture to use color display
      */
@@ -79,8 +90,9 @@ public class Picture {
             wall.changeColor("red");
             window.changeColor("black");
             roof.changeColor("green");
-            sun.changeColor("yellow");
+            sun.changeColor("blue");
         }
     }
+    
 
 }
